@@ -1,0 +1,29 @@
+CRA AutoSplit A003 alpha4 — ML envelope synthetic verification
+
+Test environment
+- Fiji ImageJ API: ij-1.54g.jar
+- Java: Fiji bundled Zulu JDK 8
+- Headless synthetic ROI test
+
+Case 1: automatic ML_TOTAL
+- Cb: 100 × 100 pixels
+- GL+WM: inner 40 × 40 pixels
+- PL_TOTAL: closed band with outer boundary 50 × 50 pixels
+- Expected molecular-side area: 10,000 − 2,500 = 7,500 pixels
+- Observed derived ML_TOTAL area: 7,500 pixels
+- Result: PASS
+
+Case 2: supplied ML_TOTAL precedence
+- Added a verified area ROI named ML_TOTAL
+- Engine diagnostic selected supplied ML_TOTAL instead of automatic derivation
+- Result: PASS
+
+Exclusivity audit
+- PL ∩ ML: 0 pixels
+- PL ∩ GL: 0 pixels
+- ML ∩ GL: 0 pixels
+- Result: PASS
+
+Scope
+- This verifies mask topology and precedence using synthetic geometry.
+- Biological/anatomical accuracy still requires visual inspection on each montage.

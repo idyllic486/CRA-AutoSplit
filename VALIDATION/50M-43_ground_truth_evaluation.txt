@@ -1,0 +1,113 @@
+CRA AutoSplit A003 - read-only ground-truth evaluation
+
+Reference sample: 50M-43_CRA_ROIs.zip
+Reference SHA-256: a3e349fa7a87f09f44d09b2578e9ffa9960d9c6c399b3c4b024f89d38a8d03f1
+Reference local ROIs: 15
+Engine input ROIs (manual locals excluded): 8
+Regions: Crus1, Crus2, Fl, PFl, PM
+Seeds: 5 (derived from manual GL centroid; ML/PL fallback)
+Settings: barrierWidth=7 px, minimumComponent=500 px
+Generated candidates: 19
+Engine runtime: 2217 ms
+Meaningful-layer coverage: 98.933%
+Read-only guarantee: source ZIP was opened for reading only; no user file was modified.
+
+SEED LOCATIONS
+Crus1      x=  2438.5  y=  2097.5
+Crus2      x=  3620.3  y=  1833.3
+Fl         x=  2669.3  y=  4179.8
+PFl        x=  3090.5  y=  3329.5
+PM         x=  3892.2  y=  2531.8
+
+ML PIXEL AGREEMENT
+Region	Manual_px	Predicted_px	Intersection	Dice	IoU
+Crus1	998876	1148777	998316	0.9297	0.8686
+Crus2	706404	800172	705408	0.9364	0.8805
+Fl	465189	576806	465145	0.8928	0.8064
+PFl	838668	915318	838249	0.9558	0.9154
+PM	636222	680262	634723	0.9643	0.9310
+MACRO				0.9358	0.8804
+MICRO	3645359	4121335	3641841	0.9378	0.8829
+
+GL PIXEL AGREEMENT
+Region	Manual_px	Predicted_px	Intersection	Dice	IoU
+Crus1	863680	860565	860320	0.9979	0.9958
+Crus2	693798	694337	693697	0.9995	0.9989
+Fl	456499	456465	456465	1.0000	0.9999
+PFl	903668	901175	901175	0.9986	0.9972
+PM	539929	534677	534170	0.9942	0.9884
+MACRO				0.9980	0.9961
+MICRO	3457574	3447219	3445827	0.9981	0.9962
+
+PL LENGTH AGREEMENT
+Manual values are exact ROI polyline lengths in pixels.
+Candidate values are exact generated ROI polyline lengths in pixels.
+PL_TOTAL support=210306 px; manual local length=20960.826 px; estimated support thickness=10.033 px
+Region	Manual_length_px	Candidate_length_px_or_proxy	Ratio_auto/manual	Candidate_support_px
+Crus1	4417.998	4404.085	0.9969	15068
+Crus2	4164.308	4200.757	1.0088	14440
+Fl	3683.328	3649.154	0.9907	12453
+PFl	5189.537	5183.744	0.9989	17960
+PM	3505.654	3544.263	1.0110	12307
+TOTAL	20960.826	20982.003	1.0010	
+
+OVERALL SUMMARY
+ML macro Dice=0.9358, macro IoU=0.8804, micro Dice=0.9378, micro IoU=0.8829
+GL macro Dice=0.9980, macro IoU=0.9961, micro Dice=0.9981, micro IoU=0.9962
+
+ENGINE WARNINGS
+- ML Crus1: filtered 5 detached fragment(s), 10192 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue.
+- ML Crus2: filtered 2 detached fragment(s), 7976 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue.
+- ML Fl: filtered 1 detached fragment(s), 6045 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue.
+- ML PFl: filtered 3 detached fragment(s), 23472 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue.
+- ML PM: filtered 5 detached fragment(s), 34443 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue.
+- Meaningful layer components cover 98.93% of PL+ML+GL pixels; tiny artifacts/barrier pixels were excluded.
+
+GENERATED NAMES
+AUTO_REVIEW_GL_Crus1_part1
+AUTO_REVIEW_GL_Crus2_part1
+AUTO_REVIEW_GL_Fl_part1
+AUTO_REVIEW_GL_PFl_part1
+AUTO_REVIEW_GL_PM_part1
+AUTO_REVIEW_ML_Crus1_part1
+AUTO_REVIEW_ML_Crus1_part2
+AUTO_REVIEW_ML_Crus2_part1
+AUTO_REVIEW_ML_Crus2_part2
+AUTO_REVIEW_ML_Fl_part1
+AUTO_REVIEW_ML_Fl_part2
+AUTO_REVIEW_ML_PFl_part1
+AUTO_REVIEW_ML_PM_part1
+AUTO_REVIEW_PL_Crus1_part1
+AUTO_REVIEW_PL_Crus2_part1
+AUTO_REVIEW_PL_Fl_part1
+AUTO_REVIEW_PL_Fl_part2
+AUTO_REVIEW_PL_PFl_part1
+AUTO_REVIEW_PL_PM_part1
+
+GENERATED CANDIDATE SUPPORT
+AUTO_REVIEW_PL_Crus1_part1	15068 px
+AUTO_REVIEW_PL_Crus2_part1	14440 px
+AUTO_REVIEW_PL_Fl_part1	11260 px
+AUTO_REVIEW_PL_Fl_part2	1193 px
+AUTO_REVIEW_PL_PFl_part1	17960 px
+AUTO_REVIEW_PL_PM_part1	12307 px
+AUTO_REVIEW_ML_Crus1_part1	57518 px
+AUTO_REVIEW_ML_Crus1_part2	1091259 px
+AUTO_REVIEW_ML_Crus2_part1	46706 px
+AUTO_REVIEW_ML_Crus2_part2	753466 px
+AUTO_REVIEW_ML_Fl_part1	18389 px
+AUTO_REVIEW_ML_Fl_part2	558417 px
+AUTO_REVIEW_ML_PFl_part1	915318 px
+AUTO_REVIEW_ML_PM_part1	680262 px
+AUTO_REVIEW_GL_Crus1_part1	860565 px
+AUTO_REVIEW_GL_Crus2_part1	694337 px
+AUTO_REVIEW_GL_Fl_part1	456465 px
+AUTO_REVIEW_GL_PFl_part1	901175 px
+AUTO_REVIEW_GL_PM_part1	534677 px
+
+INTERPRETATION LIMITS
+- The saved manual annotation is a comparison reference, not independent biological truth.
+- Seed coordinates are derived from that same reference. This isolates boundary-generation performance, not seed-placement performance.
+- One montage is a development benchmark, not evidence of general accuracy. Evaluate multiple held-out montages before making a performance claim.
+- ML/GL Dice and IoU compare exact filled pixel masks within the Cb crop.
+- PL length uses exact Roi.getLength() when generated candidates are line ROIs; an explicitly labeled area/thickness proxy is used only for area candidates.

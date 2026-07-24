@@ -1,0 +1,15 @@
+# build artifacts
+*.class
+build/
+out/
+
+# local backup copies made while testing (not part of the release)
+*.jar.bak
+*.jar.bak2
+*.jar.bak3
+*.jar.bak*
+
+# OS / editor junk
+.DS_Store
+.idea/
+*.iml

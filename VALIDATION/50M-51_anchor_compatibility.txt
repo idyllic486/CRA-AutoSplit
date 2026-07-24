@@ -1,0 +1,11 @@
+roiCount=25
+anchorSource=Existing local PL names/positions (line=0, traced area=6; no SEED_ required)
+seedCount=6
+fissureCount=3
+errors=[]
+warnings=[Local PL ROIs are used only as semantic anchors and are preserved unchanged.]
+generatedCandidates=11
+assignedPercent=98.26947693703111
+overlapPixels=0,0,0
+candidateNames=[AUTO_REVIEW_ML_Sim_part1, AUTO_REVIEW_ML_Sim_part2, AUTO_REVIEW_ML_Crus1_part1, AUTO_REVIEW_ML_Crus1_part2, AUTO_REVIEW_ML_Crus1_part3, AUTO_REVIEW_ML_Crus2_part1, AUTO_REVIEW_ML_Crus2_part2, AUTO_REVIEW_GL_Crus1_part1, AUTO_REVIEW_GL_Crus2_part1, AUTO_REVIEW_GL_PFl_part1, AUTO_REVIEW_GL_Fl_part1]
+engineWarnings=[ML component 2 has a low seed-distance margin (0.0 px); inspect its boundary carefully., ML Sim: filtered 13 detached fragment(s), 121630 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue., ML Crus1: filtered 2 detached fragment(s), 8368 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue., ML Crus2: filtered 5 detached fragment(s), 22970 pixels total (<2% of the largest part). Lower Minimum component area only if those fragments are true target tissue., ML has no candidate for PM. Add/extend a fissure or move the seed., ML has no candidate for PFl. Add/extend a fissure or move the seed., ML has no candidate for Fl. Add/extend a fissure or move the seed., GL component 2 has a low seed-distance margin (14.8 px); inspect its boundary carefully., GL has no candidate for Sim. Add/extend a fissure or move the seed., GL has no candidate for PM. Add/extend a fissure or move the seed., Meaningful layer components cover 98.27% of PL+ML+GL pixels; tiny artifacts/barrier pixels were excluded.]
